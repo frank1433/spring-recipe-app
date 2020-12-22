@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--/*@thymesVar id="recipe" type="guru.springframework.domain.Recipe"*/-->
+<h1 class="panel-title" th:text="${recipe.description}">Recipe Description Here!</h1>
+<ul>
+    <li th:remove="all">cat one</li>
+    <li th:remove="all">cat two</li>
+    <li th:each="category : ${recipe.categories}" th:text="${category.getDescription()}">cat three</li>
+</ul>
+
+<ul>
+    <li th:remove="all">1 Cup of milk</li>
+    <li th:remove="all">1 Teaspoon of chocolate</li>
+    <li th:each="ingredient : ${recipe.ingredients}"
+        th:text="${(ingredient.getAmount() +
+                                        ' ' + ingredient.uom.getDescription() +
+                                        ' - ' + ingredient.getDescription())}">1 Teaspoon of Sugar</li>
+</ul>
+
+</body>
+</html>
