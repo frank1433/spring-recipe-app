@@ -2,6 +2,7 @@ package guru.springframework.controllers;
 
 import guru.springframework.services.ImageService;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -22,6 +23,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author frank
  * @create 2020-12-23
  */
+
+@Ignore
 public class ImageControllerTest {
     @Mock
     ImageService imageService;
