@@ -24,7 +24,7 @@ jobs:
             - ~/.m2
           key: v1-depenencies-{{ checksum "pom.xml" }}
 
-      - run: mvn test-compile
+      - run: mvn clean test
 
 workflows:
   version: 2
