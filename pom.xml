@@ -78,6 +78,11 @@
 					<includes>
 						<include>**/*IT.java</include>
 					</includes>
+<!--					<excludes>-->
+<!--						<include>**/*IT.java</include>-->
+<!--					</excludes>-->
+<!--					<skipAfterFailureCount>1</skipAfterFailureCount>-->
+
 					<additionalClasspathElements>
 						<additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>
 					</additionalClasspathElements>
